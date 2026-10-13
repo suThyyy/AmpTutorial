@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: Arial, sans-serif;
+  color: #222;
+  background: #f4f4f4;
+}
+
+main {
+  width: min(95vw, 620px);
+  text-align: center;
+}
+
+#board-wrapper {
+  overflow: auto;
+  margin: 20px 0;
+  padding: 4px;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(16, 32px);
+  gap: 2px;
+  width: max-content;
+  margin: auto;
+}
+
+.cell {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid #777;
+  border-radius: 3px;
+  color: #222;
+  background: white;
+  font-size: 19px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cell:hover:empty {
+  background: #e7e7e7;
+}
+
+#restart {
+  padding: 10px 22px;
+  border: 0;
+  border-radius: 6px;
+  color: white;
+  background: #333;
+  cursor: pointer;
+}
+
+@media (max-width: 580px) {
+  #board {
+    margin: 0;
+  }
+}
